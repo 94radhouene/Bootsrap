@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="CustomStyle.css" rel="stylesheet">
+</head>
+<body>
+    1) styling code : 
+    <pre class="pre-scrollable">public class Program
+{
+    public static void Main()
+    {
+        Customer customer1 = new Customer()
+        {
+            ID = 101,
+            Name = "Mark",
+            Salary = 5000
+        };
+        Customer customer2 = new Customer()
+        {
+            ID = 102,
+            Name = "Pam",
+            Salary = 7000
+        };
+        Customer customer3 = new Customer()
+        {
+            ID = 104,
+            Name = "Rob",
+            Salary = 5500
+        };
+        Customer[] arrayCustomers = new Customer[2];
+        arrayCustomers[0] = customer1;
+        arrayCustomers[1] = customer2;
+       
+        List<customer> listCustomers = new List<customer>(2);
+        listCustomers.Add(customer1);
+        listCustomers.Add(customer2);
+        listCustomers.Add(customer3);
+        Customer cust = listCustomers[0];
+        Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+                           cust.ID, cust.Name, cust.Salary);
+        Console.WriteLine("--------------------------------");
+       
+        for (int i = 0; i < listCustomers.Count; i++)
+        {
+            Customer customer = listCustomers[i];
+            Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+                     customer.ID, customer.Name, customer.Salary);
+        }
+        Console.WriteLine("--------------------------------");
+       
+        foreach (Customer c in listCustomers)
+        {
+            Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+                                c.ID, c.Name, c.Salary);
+        }
+        Console.WriteLine("--------------------------------");
+       
+        listCustomers.Insert(1, customer3);
+        Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+               listCustomers[1].ID, listCustomers[1].Name,
+               listCustomers[1].Salary);
+        Console.WriteLine("--------------------------------");
+       
+        Console.WriteLine("Index of Customer3 object in the List = "
+                           + listCustomers.IndexOf(customer3));
+        Console.WriteLine("--------------------------------");
+    }
+}</pre>
+
+    2) styling keybord : 
+    <h4>Visual Studio</h4>
+    <p>
+        Keyboard shorcut for commenting code
+        <kbd>CTRL</kbd> <kbd>K</kbd> and <kbd>CTRL</kbd> <kbd>C</kbd>
+    </p>
+    <p>
+        Keyboard shorcut for uncommenting code
+        <kbd>CTRL</kbd> <kbd>K</kbd> and <kbd>CTRL</kbd> <kbd>U</kbd>
+    </p>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
